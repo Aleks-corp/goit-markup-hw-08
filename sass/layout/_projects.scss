@@ -1,0 +1,94 @@
+//----------filter-btn----------//
+.projects-filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.projects-filter-list__item:not(:last-child) {
+  margin-right: 8px;
+}
+.projects-filter-list__btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  background-color: var(--secondary-bg-color);
+  border: 0;
+  border-radius: 4px;
+
+  padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+// ----------projects----------//
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.portfolio-list__item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: var(--margin-typical);
+  /* max-width: 370px; */
+  margin-bottom: var(--margin-typical);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.portfolio-list__item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+.portfolio-desc-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-desc-thumb__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  padding: 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #ffffff;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .portfolio-list__item:hover & {
+    transform: translateY(0);
+  }
+}
+
+.title-text-wrap {
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px;
+}
+.portfolio-list__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+  margin-bottom: 4px;
+}
+.portfolio-list__text {
+  font-size: 16px;
+  line-height: 1.88;
+}
