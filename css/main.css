@@ -68,6 +68,10 @@ button {
   overflow: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
