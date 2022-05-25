@@ -38,8 +38,14 @@ body {
 }
 
 .section {
-  padding-top: var(--padding-typical);
-  padding-bottom: var(--padding-typical);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .link {
@@ -69,15 +75,32 @@ button {
 }
 
 .no-scroll {
-  overflow: hidden;
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px;
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   /* outline: 1px solid red; */
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .logo {
@@ -298,6 +321,7 @@ button {
 
 .page-footer .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .page-footer__logo {

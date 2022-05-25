@@ -8,8 +8,12 @@ body {
   color: var(--primary-text-color);
 }
 .section {
-  padding-top: var(--padding-typical);
-  padding-bottom: var(--padding-typical);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .link {

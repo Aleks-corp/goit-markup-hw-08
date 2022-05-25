@@ -1,5 +1,9 @@
 .works-section {
-  padding-top: 0;
+  display: none;
+  @include media(1200px) {
+    display: block;
+    padding-top: 0;
+  }
 }
 
 .works-list {
