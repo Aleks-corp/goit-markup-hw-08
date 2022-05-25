@@ -4,19 +4,37 @@
   padding-bottom: 60px;
 }
 .page-footer .container {
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
+  @include media(768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include media(1200px) {
+    text-align: left;
+    justify-content: space-between;
+  }
 }
-
+.footer-main-container {
+  @include media(1200px) {
+    margin-left: 0;
+  }
+}
 .page-footer__logo {
   display: inline-block;
   margin-bottom: 20px;
+}
+.footer-contacts {
+  margin-bottom: 60px;
 }
 .footer-contacts__list {
   min-width: 230px;
 }
 .footer-contacts__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include media(1200px) {
+    margin-bottom: 9px;
+  }
 }
 .footer-contacts__address {
   font-style: normal;
@@ -37,8 +55,14 @@
 /* ----------FOOTER-SOCIAL---------- */
 
 .footer-social-container {
-  margin-left: 70px;
-  margin-top: 12px;
+  margin-bottom: 60px;
+  @include media(768px) {
+    margin-top: 5px;
+  }
+  @include media(1200px) {
+    margin-top: 12px;
+    margin-right: 10px;
+  }
 }
 .footer-social-container__title {
   font-weight: 700;
@@ -49,6 +73,7 @@
 }
 .footer-social {
   display: flex;
+  justify-content: center;
 }
 .footer-social__item {
   width: 44px;
@@ -78,8 +103,10 @@
 /* ----------subscribe---------- */
 
 .footer-subscribe-container {
-  margin-left: auto;
-  margin-top: 12px;
+  @include media(1200px) {
+    max-width: 570px;
+    margin-top: 12px;
+  }
 }
 .footer-subscribe-container__title {
   font-weight: 700;
@@ -88,8 +115,13 @@
   color: var(--secondary-text-color);
   margin-bottom: 20px;
 }
+
 .subscr-form__email {
-  width: 358px;
+  width: 100%;
+  max-width: 450px;
+  @include media(1200px) {
+    width: 354px;
+  }
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -98,12 +130,15 @@
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
+  margin-bottom: 20px;
 }
 .subscr-form__btn {
   display: inline-flex;
   align-items: center;
-  padding: 10px 29px;
-  margin-left: 12px;
+  padding: 10px 28px;
+  @include media(1200px) {
+    margin-left: 12px;
+  }
 }
 .subscr-form__text {
   font-weight: 700;

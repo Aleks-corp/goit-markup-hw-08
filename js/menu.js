@@ -1,16 +1,21 @@
 (() => {
   const refs = {
-    openMenuBtn: document.querySelector(".menu-open-btn"),
-    closeMenuBtn: document.querySelector(".menu-close-btn"),
-    menu: document.querySelector(".mob-menu"),
+    mobMenuBtn: document.querySelector(".menu-btn"),
+    icon: document.querySelector(".menu-btn"),
+    menu: document.querySelector(".menu-container"),
     body: document.querySelector("body"),
   };
 
-  refs.openMenuBtn.addEventListener("click", toggleMenu);
-  refs.closeMenuBtn.addEventListener("click", toggleMenu);
+  refs.mobMenuBtn.addEventListener("click", () => {
+    const expanded =
+      refs.mobMenuBtn.getAttribute("aria-expanded") === "true" || false;
+    refs.mobMenuBtn.setAttribute("aria-expanded", !expanded);
+  });
+  refs.mobMenuBtn.addEventListener("click", toggleMenu);
 
   function toggleMenu() {
-    refs.menu.classList.toggle("is-hidden");
+    refs.icon.classList.toggle("is-open");
+    refs.menu.classList.toggle("is-open");
     refs.body.classList.toggle("no-scroll");
   }
 })();
