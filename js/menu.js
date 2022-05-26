@@ -2,7 +2,7 @@
   const refs = {
     mobMenuBtn: document.querySelector(".menu-btn"),
     icon: document.querySelector(".menu-btn"),
-    menu: document.querySelector(".menu-container"),
+    menu: document.querySelector(".mob-menu-thumb"),
     body: document.querySelector("body"),
   };
 
