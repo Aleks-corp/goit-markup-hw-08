@@ -1,8 +1,15 @@
 //----------filter-btn----------//
 .projects-filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 35px;
+  @include media(768px) {
+    justify-content: center;
+  }
+}
+.projects-filter-list__item {
+  margin-bottom: 15px;
 }
 .projects-filter-list__item:not(:last-child) {
   margin-right: 8px;
@@ -31,23 +38,29 @@
 }
 // ----------projects----------//
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
+  @include media(768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 .portfolio-list__item {
-  flex-basis: calc((100% - 90px) / 3);
-  margin-left: var(--margin-typical);
-  /* max-width: 370px; */
-  margin-bottom: var(--margin-typical);
+  @include media(768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @include media(1200px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+
+  margin-bottom: 30px;
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
-.portfolio-list__item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
+
 .portfolio-desc-thumb {
   position: relative;
   overflow: hidden;

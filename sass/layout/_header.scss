@@ -1,8 +1,6 @@
-.header-main-container {
-  display: none;
-  @include media(768px) {
-    display: block;
-  }
+.page-header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
 }
 .mob-menu-container {
   width: 100%;
@@ -10,18 +8,25 @@
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
-  z-index: 9;
+  z-index: 10;
   @include media(768px) {
     display: none;
   }
 }
+.header-main-container {
+  display: none;
+  @include media(768px) {
+    display: block;
+  }
+}
+
 .menu-btn {
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 99;
+  z-index: 20;
   @include media(768px) {
     display: none;
   }
@@ -50,6 +55,7 @@
       height: 100vh;
       padding: 40px 48px;
       overflow-y: auto;
+      z-index: 10;
       background-color: var(--primary-bg-color);
     }
   }
@@ -106,6 +112,7 @@
 .mob-soc__item:not(:last-child) {
   margin-right: 10px;
   padding-right: 10px;
+  margin-bottom: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 .mob-soc__link {
@@ -119,12 +126,16 @@
     color: #188ce8;
   }
 }
-// -------------------site-------------
+// ----------------desktop-------------
 .page-header {
   @include media(768px) {
     max-width: 1600px;
     margin: 0 auto;
-    border-bottom: 1px solid #ececec;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @include media(1200px) {
     padding-top: 24px;
     padding-bottom: 24px;
   }
@@ -134,16 +145,19 @@
   @include media(768px) {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
 .site-nav {
-  display: flex;
-  align-items: center;
+  @include media(1200px) {
+    margin-left: 93px;
+  }
 }
 .site-nav__list {
-  display: inline-flex;
-  margin-left: 93px;
+  display: flex;
+  align-items: center;
 }
 .site-nav__item:not(:last-child) {
   margin-right: 50px;
@@ -167,7 +181,7 @@
   bottom: -32px;
   width: 100%;
   background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  border: 2px solid var(--accent-color);
   border-radius: 2px;
   animation: header-animation 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
@@ -182,12 +196,18 @@
 }
 
 .site-contacts {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  @include media(1200px) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 .site-contacts__item:first-child {
-  margin-right: var(--margin-typical);
+  margin-bottom: 10px;
+  @include media(1200px) {
+    margin-bottom: 0;
+    margin-right: var(--margin-typical);
+  }
 }
 .site-contacts__link {
   display: flex;
@@ -199,74 +219,16 @@
   &:focus {
     color: var(--accent-color);
   }
+  @include media(768px) {
+    font-size: 12px;
+  }
+  @include media(1200px) {
+    font-size: inherit;
+  }
 }
 .site-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
-
-// .site-nav__list {
-//   @include media(1200px) {
-//     display: inline-flex;
-//     margin-left: 93px;
-//   }
-// }
-// .site-nav__link {
-//   position: relative;
-//   color: var(--title-text-color);
-
-//   font-weight: 500;
-//   letter-spacing: 0.02em;
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
-// .site-nav__link.current::after {
-//   content: "";
-//   position: absolute;
-//   left: 0;
-//   bottom: -32px;
-//   width: 100%;
-//   background-color: var(--accent-color);
-//   border: 1px solid var(--accent-color);
-//   border-radius: 2px;
-//   animation: header-animation 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   pointer-events: none;
-// }
-// @keyframes header-animation {
-//   0% {
-//     transform: scaleX(0);
-//   }
-//   100% {
-//     transform: scaleX(1);
-//   }
-// }
-
-// .site-contacts {
-//   @include media(1200px) {
-//     display: flex;
-//     align-items: center;
-//     margin-left: auto;
-//   }
-// }
-// .site-contacts__item:first-child {
-//   margin-right: var(--margin-typical);
-// }
-// .site-contacts__link {
-//   display: flex;
-//   align-items: center;
-//   color: var(--primary-text-color);
-//   font-weight: 500;
-//   letter-spacing: 0.02em;
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
-// .site-contacts__icon {
-//   margin-right: 10px;
-//   fill: currentColor;
-// }
 
 // transition hover,focus in base/common--.link
