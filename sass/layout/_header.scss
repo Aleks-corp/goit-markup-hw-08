@@ -27,6 +27,10 @@
   border: none;
   background-color: transparent;
   z-index: 20;
+  &:hover .menu-btn__img,
+  &:focus .menu-btn__img {
+    fill: var(--accent-color);
+  }
   @include media(768px) {
     display: none;
   }
