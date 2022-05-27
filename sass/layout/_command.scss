@@ -23,6 +23,9 @@
     flex-basis: calc(100% / 4 - 30px);
   }
 }
+.command-list__img {
+  width: 100%;
+}
 .command-thumb {
   padding: 30px 30px 24px;
   @include media(768px) {
