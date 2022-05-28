@@ -141,11 +141,17 @@ button {
 
 .section-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .page-header {
@@ -260,7 +266,9 @@ button {
 
 .mob-contacts__mail {
   color: var(--primary-text-color);
+  font-size: 24px;
   font-weight: 500;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 }
 .mob-contacts__mail:hover, .mob-contacts__mail:focus {
@@ -769,19 +777,19 @@ button {
   }
 }
 
+.footer-main-container {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 1200px) {
   .footer-main-container {
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
 .page-footer__logo {
   display: inline-block;
   margin-bottom: 20px;
-}
-
-.footer-contacts {
-  margin-bottom: 60px;
 }
 
 .footer-contacts__list {
@@ -819,6 +827,7 @@ button {
 @media screen and (min-width: 768px) {
   .footer-social-container {
     margin-top: 5px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -900,6 +909,7 @@ button {
 @media screen and (min-width: 1200px) {
   .subscr-form__email {
     width: 354px;
+    margin-bottom: 0;
   }
 }
 

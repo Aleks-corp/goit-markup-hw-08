@@ -251,7 +251,9 @@ button {
 
 .mob-contacts__mail {
   color: var(--primary-text-color);
+  font-size: 24px;
   font-weight: 500;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 }
 .mob-contacts__mail:hover, .mob-contacts__mail:focus {
@@ -405,11 +407,17 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .projects-filter-list {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects-filter-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -465,6 +473,10 @@ button {
 }
 .portfolio-list__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list__item:last-child {
+  margin-bottom: 0;
 }
 
 .portfolio-list__img {
@@ -542,19 +554,19 @@ button {
   }
 }
 
+.footer-main-container {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 1200px) {
   .footer-main-container {
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
 .page-footer__logo {
   display: inline-block;
   margin-bottom: 20px;
-}
-
-.footer-contacts {
-  margin-bottom: 60px;
 }
 
 .footer-contacts__list {
@@ -592,6 +604,7 @@ button {
 @media screen and (min-width: 768px) {
   .footer-social-container {
     margin-top: 5px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -673,6 +686,7 @@ button {
 @media screen and (min-width: 1200px) {
   .subscr-form__email {
     width: 354px;
+    margin-bottom: 0;
   }
 }
 

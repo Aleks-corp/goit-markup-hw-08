@@ -16,16 +16,15 @@
   }
 }
 .footer-main-container {
+  margin-bottom: 60px;
   @include media(1200px) {
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 .page-footer__logo {
   display: inline-block;
   margin-bottom: 20px;
-}
-.footer-contacts {
-  margin-bottom: 60px;
 }
 .footer-contacts__list {
   min-width: 230px;
@@ -58,6 +57,7 @@
   margin-bottom: 60px;
   @include media(768px) {
     margin-top: 5px;
+    margin-bottom: 0;
   }
   @include media(1200px) {
     margin-top: 12px;
@@ -119,9 +119,7 @@
 .subscr-form__email {
   width: 100%;
   max-width: 450px;
-  @include media(1200px) {
-    width: 354px;
-  }
+
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -131,6 +129,10 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   margin-bottom: 20px;
+  @include media(1200px) {
+    width: 354px;
+    margin-bottom: 0;
+  }
 }
 .subscr-form__btn {
   display: inline-flex;

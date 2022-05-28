@@ -1,8 +1,12 @@
 .section-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @include media(1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }

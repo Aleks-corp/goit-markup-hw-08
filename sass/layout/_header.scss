@@ -97,7 +97,9 @@
 }
 .mob-contacts__mail {
   color: var(--primary-text-color);
+  font-size: 24px;
   font-weight: 500;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   &:hover,
   &:focus {
